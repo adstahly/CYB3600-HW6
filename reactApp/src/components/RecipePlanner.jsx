@@ -2,7 +2,7 @@ import React from 'react';
 import useFetch from "./useFetch.jsx";
 
 
-function RecipePlanner(props) {
+const RecipePlanner = () => {
     const {data: recipes, isPending, error} = useFetch("http://localhost:3334/recipes");
     return (
         <>
