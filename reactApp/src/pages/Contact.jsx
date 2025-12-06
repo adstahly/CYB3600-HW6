@@ -107,7 +107,7 @@ const Contact = () => {
                     <p className="mb-1"><strong>Name:</strong> {submittedData.name}</p>
                     <p className="mb-1"><strong>Email:</strong> {submittedData.email}</p>
                     <p className="mb-1"><strong>Date:</strong> {submittedData.date}</p>
-                    <p className="mb-0"><strong>Message:</strong> {submittedData.message}</p>
+                    <p className="mb-0 text-break"><strong>Message:</strong> {submittedData.message}</p>
                 </div>
             )}
         </>
