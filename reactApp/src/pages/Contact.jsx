@@ -55,26 +55,44 @@ const Contact = () => {
             <form className="form-inline" onSubmit={handleSubmit}>
                 <div className="form-group mb-3">
                     <label className="form-label">Student Name</label>
-                    <input className={`form-control ${errors.name ? 'is-invalid' : ''}`} id="name" type="text"
-                           value={formData.name} onChange={handleChange} placeholder="Your full name"/>
+                    <input
+                        className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                        id="name"
+                        type="text"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Your full name"/>
                     {errors.name && <div className="invalid-feedback"> {errors.name} </div>}
                 </div>
                 <div className="form-group mb-3">
                     <label className="form-label">Email Address</label>
-                    <input className={`form-control ${errors.email ? 'is-invalid' : ''}`} id="email" type="text"
-                           value={formData.email} onChange={handleChange} placeholder="you@example.com"/>
+                    <input
+                        className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                        id="email"
+                        type="text"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="you@example.com"/>
                     {errors.email && <div className="invalid-feedback"> {errors.email} </div>}
                 </div>
                 <div className="form-group mb-3">
                     <label className="form-label">Date</label>
-                    <input className="form-control" type="text" value={formData.date} onChange={handleChange} readOnly/>
+                    <input
+                        className="form-control"
+                        type="text"
+                        value={formData.date}
+                        onChange={handleChange}
+                        readOnly/>
                     <div className="form-text"> This is automatically set to today's date.</div>
                 </div>
                 <div className="form-group mb-3">
                     <label className="form-label">Message</label>
-                    <textarea className={`form-control ${errors.message ? 'is-invalid' : ''}`} id="message" rows="3"
-                              value={formData.message} onChange={handleChange}
-                              placeholder="Write your message here (at least 10 characters)"></textarea>
+                    <textarea
+                        className={`form-control ${errors.message ? 'is-invalid' : ''}`} id="message" rows="3"
+                        value={formData.message}
+                        onChange={handleChange}
+                        maxLength={300}
+                        placeholder="Write your message here (at least 10 characters)"></textarea>
                     {errors.message && <div className="invalid-feedback"> {errors.message} </div>}
                     <div className="form-text">
                         {formData.message.length} / 300 characters
